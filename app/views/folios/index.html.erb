@@ -1,0 +1,9 @@
+<h1>Folios</h1>
+
+<% @folio_items.each do |folio| %>
+
+<h2><%= folio.title %></h2>
+<%= image_tag folio.thumb_image, alt: "alttext" %>
+<h3><%= folio.subtitle %></h3>
+<p><%= folio.body %></p>
+<% end %>
