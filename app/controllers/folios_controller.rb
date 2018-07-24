@@ -17,7 +17,21 @@ class FoliosController < ApplicationController
       end
 	end
 
+	def edit
+      @folio_item = Folio.find(params[:id])
+	end
+
+	def update
+      @folio_item = Folio.find(params[:id])
+      if @folio_item.update(folio_params)
+      	redirect_to @folio_item
+      else
+      	render 'new'
+      end
+	end
+
 	def show
+	  @folio_item = Folio.find(params[:id])
 	end
 
 	private
