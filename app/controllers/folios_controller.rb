@@ -34,6 +34,13 @@ class FoliosController < ApplicationController
 	  @folio_item = Folio.find(params[:id])
 	end
 
+	def destroy
+      @folio_item = Folio.find(params[:id])
+      if @folio_item.destroy
+        redirect_to folios_path
+      end
+	end
+
 	private
 
 	  def folio_params
