@@ -1,0 +1,13 @@
+
+<%= image_tag @folio_item.main_image, alt: "alttext" %>
+
+<h1><%= @folio_item.title %></h1>
+
+<h2><%= @folio_item.subtitle %></h2>
+
+<br>
+
+
+<p><%= @folio_item.body %></p>
+
+<p><%= link_to "Delete item", folio_path, method: :delete  %></p>
