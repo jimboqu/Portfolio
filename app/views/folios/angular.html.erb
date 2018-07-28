@@ -1,0 +1,10 @@
+<h1>Angular Folios</h1>
+<%= link_to "Create new Folio item", new_folio_path  %>
+<% @angular_folio_items.each do |folio| %>
+
+<h2><%= link_to folio.title, folio_show_path(folio) %></h2>
+<%= image_tag folio.thumb_image, alt: "alttext" %>
+<h3><%= folio.subtitle %></h3>
+<p><%= folio.body %> </p>
+<p><%= link_to "Edit", edit_folio_path(folio)  %></p>
+<% end %>

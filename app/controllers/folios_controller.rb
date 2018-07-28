@@ -3,6 +3,9 @@ class FoliosController < ApplicationController
 	  @folio_items =  Folio.all
 	end
 
+    def angular
+      @angular_folio_items = Folio.angular
+    end
 
 	def new
 	  @folio_item = Folio.new
