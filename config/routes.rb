@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :folios, except: [:show]
-  get 'folio/:id', to: 'folios#show', as: 'folio_show'
+  resources :folios
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
   resources :blogs do
