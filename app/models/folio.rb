@@ -2,6 +2,7 @@ class Folio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :subtitle, :main_image, :thumb_image, :body
   has_many :technologies
+  accepts_nested_attributes_for :technologies, reject_if: lambda {|attrs| attrs['name'].blank?}
   def self.angular
     where(subtitle: "Angular")
   end
