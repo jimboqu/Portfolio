@@ -1,8 +1,8 @@
-<h1>Folios</h1>
+<h1>Angular Folios</h1>
 <%= link_to "Create new Folio item", new_folio_path  %>
-<% @folio_items.each do |folio| %>
+<% @angular_folio_items.each do |folio| %>
 
-<h2><%= link_to folio.title, folio_path(folio) %></h2>
+<h2><%= link_to folio.title, folio_show_path(folio) %></h2>
 <%= image_tag folio.thumb_image, alt: "alttext" %>
 <h3><%= folio.subtitle %></h3>
 <p><%= folio.body %> </p>

@@ -9,5 +9,10 @@
 
 
 <p><%= @folio_item.body %></p>
+<h3>Technologies</h3>
+<% @folio_item.technologies.each do |tech| %>
+<p><%= tech.name %></p>
+
+<% end %>
 
 <p><%= link_to "Delete item", folio_path, method: :delete  %></p>

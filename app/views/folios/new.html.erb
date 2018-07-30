@@ -7,6 +7,15 @@
 
   <%= f.label :body %>:
   <%= f.text_field :body %><br />
+  <ul>
+  <%= f.fields_for :technologies do |tech| %>
+
+    <%= tech.label :name %>:
+    <%= tech.text_field :name %><br>
+
+  <% end %>
+  </ul>
+  
 
   <%= f.submit %>
 <% end %>
