@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :folios
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
