@@ -26,7 +26,7 @@ class FoliosController < ApplicationController
 
 	def edit
       @folio_item = Folio.find(params[:id])
-	end
+  end
 
 	def update
       @folio_item = Folio.find(params[:id])
