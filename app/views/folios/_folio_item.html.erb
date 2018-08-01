@@ -1,0 +1,5 @@
+<h2><%= link_to folio_item.title, folio_path(folio_item) %></h2>
+<%= image_tag folio_item.thumb_image, alt: "alttext" %>
+<h3><%= folio_item.subtitle %></h3>
+<p><%= folio_item.body %> </p>
+<p><%= link_to "Edit", edit_folio_path(folio_item)  %></p>
