@@ -1,5 +1,5 @@
 class FoliosController < ApplicationController
-
+  before_action :set_folio, only:[:edit, :update, :show, :destroy]
   layout "folio"
 
 	def index
@@ -25,11 +25,9 @@ class FoliosController < ApplicationController
 	end
 
 	def edit
-      @folio_item = Folio.find(params[:id])
   end
 
 	def update
-      @folio_item = Folio.find(params[:id])
       if @folio_item.update(folio_params)
       	redirect_to @folio_item
       else
@@ -38,11 +36,9 @@ class FoliosController < ApplicationController
 	end
 
 	def show
-	  @folio_item = Folio.find(params[:id])
 	end
 
 	def destroy
-      @folio_item = Folio.find(params[:id])
       if @folio_item.destroy
         redirect_to folios_path
       end
@@ -53,4 +49,8 @@ class FoliosController < ApplicationController
 	  def folio_params
         params.require(:folio).permit(:title, :subtitle, :body, technologies_attributes: [:name])
 	  end
+
+    def set_folio
+      @folio_item = Folio.find(params[:id])
+    end
 end
