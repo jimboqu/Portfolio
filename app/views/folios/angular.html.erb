@@ -6,5 +6,5 @@
 <%= image_tag folio.thumb_image, alt: "alttext" %>
 <h3><%= folio.subtitle %></h3>
 <p><%= folio.body %> </p>
-<p><%= link_to "Edit", edit_folio_path(folio)  %></p>
+<p><%= link_to "Edit", edit_folio_path(folio) if logged_in?(:site_admin) %></p>
 <% end %>

@@ -1,6 +1,7 @@
 class FoliosController < ApplicationController
   before_action :set_folio, only:[:edit, :update, :show, :destroy]
   layout "folio"
+  access all: [:show, :index, :angular], user: {except: [:destroy, :edit, :create, :new, :update]}, site_admin: :all
 
 	def index
 	  @folio_items =  Folio.all

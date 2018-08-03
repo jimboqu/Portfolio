@@ -15,4 +15,4 @@
 
 <% end %>
 
-<p><%= link_to "Delete item", folio_path, method: :delete  %></p>
+<p><%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %></p>

@@ -1,4 +1,4 @@
 <h1>Folios</h1>
-<%= link_to "Create new Folio item", new_folio_path  %>
+<%= link_to "Create new Folio item", new_folio_path if logged_in?(:site_admin)  %>
 <%= render partial: 'folio_item', collection: @folio_items %>
 
