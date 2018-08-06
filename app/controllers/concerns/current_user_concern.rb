@@ -1,5 +1,6 @@
 module CurrentUserConcern
-
+#this is designed to work with Petergate and allow a guest user user 
+#to be displayed and switch to a name if they're logged in. Look at the login_helper function is_a?
 extend ActiveSupport::Concern
 
 included do 
