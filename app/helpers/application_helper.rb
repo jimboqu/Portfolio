@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def login_helper style
+  def login_helper style = ''
     if current_user.is_a?(GuestUser)
       #the brackets are to stop ruby just returning the last one
       (link_to "Sign in", new_user_session_path, class: style) + 
