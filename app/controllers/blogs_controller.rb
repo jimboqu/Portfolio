@@ -6,8 +6,9 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = "The Blog"
+    @last_blog = Blog.last
   end
 
   # GET /blogs/1

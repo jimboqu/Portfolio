@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :set_copyright
 
   def set_copyright
-    @copyright = JimboquCopyright::Renderer.copyright("James", "Reserved")
+    @copyright = JimboquCopyright::Renderer.copyright("James Quilter", "All rights reserved")
   end
 
   module JimboquCopyright 
