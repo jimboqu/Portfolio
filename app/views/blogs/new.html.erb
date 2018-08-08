@@ -1,5 +1,18 @@
-<h1>New Blog</h1>
+<main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+      	<h1>New Blog</h1>
+      	<div class="blog-post">
+  			
+			
+			<%= render 'form', blog: @blog %>
+		</div>
+	  </div>
+	  <%= render "shared/blog_sidebar" %>
+	</div>
+</main>
 
-<%= render 'form', blog: @blog %>
 
-<%= link_to 'Back', blogs_path %>
+
+
+
