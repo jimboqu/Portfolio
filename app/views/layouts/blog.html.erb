@@ -15,14 +15,9 @@
     <div class="container">
       
       <%= render 'shared/blog_nav' %>
+  
 
-    
-
-
-
-    <%= login_helper %>
-
-    <%= yield %>
+      <%= yield %>
 
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
@@ -33,6 +28,6 @@
 
     <%= source_helper %>
 
-    <%= render "shared/nav", location: 'bottom' %>
+    </div>
   </body>
 </html>
