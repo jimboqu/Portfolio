@@ -4,7 +4,7 @@ class FoliosController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :edit, :create, :new, :update]}, site_admin: :all
 
 	def index
-	  @folio_items =  Folio.all
+	  @folio_items =  Folio.by_position
 	end
 
     def angular
