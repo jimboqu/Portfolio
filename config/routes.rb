@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_up: 'signup'}
-  resources :folios
+  resources :folios do
+    put :sort, on: :collection
+  end
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
   resources :blogs do
