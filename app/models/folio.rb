@@ -7,6 +7,9 @@ class Folio < ApplicationRecord
     where(subtitle: "Angular")
   end
 
+  mount_uploader :thumb_image, FolioUploader
+  mount_uploader :main_image, FolioUploader
+
   after_initialize :set_defaults
 
   def self.by_position

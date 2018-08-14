@@ -1,8 +1,8 @@
 
-<div class="container">
+<div class="container  portfolio-container">
 	<div class="row">
 		<div class="col-md-7">
-			<%= image_tag @folio_item.main_image, alt: "alttext" %>
+			<%= image_tag @folio_item.main_image.url, alt: "alttext", width: '100%' %>
 		</div>
 		<div class="col-md-5">
 			<h1><%= @folio_item.title %></h1>
