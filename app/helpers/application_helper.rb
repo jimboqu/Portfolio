@@ -1,7 +1,7 @@
 module ApplicationHelper
   def login_helper style = ''
     if current_user.is_a?(GuestUser)
-      #the brackets are to stop ruby just returning the last one
+      #the brackets are to stop ruby just returning just the last one
       (link_to "Sign in", new_user_session_path, class: style) + 
       (link_to "Sign up", new_user_registration_path, class: style)
     else
@@ -18,11 +18,11 @@ module ApplicationHelper
 #the method below takes two arguments and makes a nav. 
   def navigation_helper style, tag
 nav_links = <<NAV
-<#{tag}><a href="#{root_path}" class="#{style} #{active? root_path}">Home</a></#{tag}>
-<#{tag}><a href="#{about_path}" class="#{style} #{active? about_path}">About</a></#{tag}>
-<#{tag}><a href="#{contact_path}" class="#{style} #{active? contact_path}">Contact</a></#{tag}>
-<#{tag}><a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blog</a></#{tag}>
-<#{tag}><a href="#{folios_path}" class="#{style} #{active? folios_path}">Folio</a></#{tag}>
+  <#{tag}><a href="#{root_path}" class="#{style} #{active? root_path}">Home</a></#{tag}>
+  <#{tag}><a href="#{about_path}" class="#{style} #{active? about_path}">About</a></#{tag}>
+  <#{tag}><a href="#{contact_path}" class="#{style} #{active? contact_path}">Contact</a></#{tag}>
+  <#{tag}><a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blog</a></#{tag}>
+  <#{tag}><a href="#{folios_path}" class="#{style} #{active? folios_path}">Folio</a></#{tag}>
 NAV
   nav_links.html_safe
   end
