@@ -34,12 +34,16 @@
     <h2>Tech used</h2>
     <ul>
       <%= f.fields_for :technologies do |tech| %>
-      <div class="form-group">
-      <%= tech.label :name %>:
-      <%= tech.text_field :name, class: "form-control" %>
+      <div class="form-group nested-fields">
+
+        #the name of the render is important for this partial
+        <%= render 'technology_fields', f: tech %>
       </div>
       <% end %>
     </ul>
+      <div>
+        <%= link_to_add_association "Add technology", f, :technologies %>
+      </div>
       <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>

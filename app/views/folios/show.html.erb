@@ -13,6 +13,7 @@
 				<p><%= tech.name %></p>
 			<% end %>
 			<%= link_to "View all folio items", folios_path  %>
+			| <%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %></p>
 		</div>
 	</div>
 </div>
@@ -27,4 +28,3 @@
 
 
 
-<p><%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %></p>

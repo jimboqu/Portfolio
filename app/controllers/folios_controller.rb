@@ -19,7 +19,6 @@ class FoliosController < ApplicationController
 
 	def new
 	  @folio_item = Folio.new
-    3.times {@folio_item.technologies.build}
 	end
 
 	def create
