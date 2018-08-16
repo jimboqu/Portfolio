@@ -22,6 +22,7 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.5'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
