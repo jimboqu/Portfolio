@@ -34,7 +34,7 @@
     <h2>Tech used</h2>
     <ul>
       <%= f.fields_for :technologies do |tech| %>
-      <div class="form-group nested-fields">
+      <div class="nested-fields form-group">
 
         #the name of the render is important for this partial
         <%= render 'technology_fields', f: tech %>
