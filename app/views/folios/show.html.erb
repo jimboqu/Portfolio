@@ -2,7 +2,7 @@
 <div class="container  portfolio-container">
 	<div class="row">
 		<div class="col-md-7">
-			<%= image_tag @folio_item.main_image.url, alt: "<%= @folio_item.title %>", width: '100%' %>
+			<%= image_tag @folio_item.main_image.url, alt: "@folio_item.title ", width: '100%' %>
 		</div>
 		<div class="col-md-5">
 			<h1><%= @folio_item.title %></h1>
@@ -13,14 +13,12 @@
 				<p><%= tech.name %></p>
 			<% end %>
 			<%= link_to "View all folio items", folios_path  %>
-			| <%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %></p>
+			| <%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %>| <%= link_to "Edit Folio item", edit_folio_path(@folio_item), data: { turbolinks: false } if logged_in?(:site_admin)  %></p>
 		</div>
-		<% if logged_in?(:site_admin) %>
-			<div class="col-md-12">
-			  <%= link_to "Edit Folio item", folio_path(@folio_item), class: "btn btn-info"  %>
-			</div>
+		
+			
 		</div>
-		<% end %>
+		
 	</div>
 	
 </div>

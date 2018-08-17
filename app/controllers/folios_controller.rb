@@ -53,7 +53,7 @@ class FoliosController < ApplicationController
 	private
 
 	  def folio_params
-        params.require(:folio).permit(:title, :subtitle, :body, :thumb_image, :main_image, technologies_attributes: [:name])
+        params.require(:folio).permit(:title, :subtitle, :body, :thumb_image, :main_image, technologies_attributes: [:id, :name, :_destroy])
 	  end
 
     def set_folio
