@@ -15,7 +15,14 @@
 			<%= link_to "View all folio items", folios_path  %>
 			| <%= link_to "Delete item", folio_path, method: :delete if logged_in?(:site_admin)  %></p>
 		</div>
+		<% if logged_in?(:site_admin) %>
+			<div class="col-md-12">
+			  <%= link_to "Edit Folio item", folio_path(@folio_item), class: "btn btn-info"  %>
+			</div>
+		</div>
+		<% end %>
 	</div>
+	
 </div>
 
 
