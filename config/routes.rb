@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   get 'contact', to: 'pages#contact'
   get 'about', to: 'pages#about'
+  get 'content-news', to: 'pages#content_news'
   resources :blogs do
     member do
       get :toggle_status
