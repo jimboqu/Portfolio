@@ -1,5 +1,17 @@
-<% @tweets.each do |tweet| %>
 
-<p><%= tweet %></p>
 
-<% end %>
+<main role="main" class="inner cover text-center">
+<h1 class="cover-heading">Content Marketing Social</h1>
+
+<div class="row">
+  <% @tweets.each do |tweet| %>
+	<div class="col-md-6">
+		<div class="content-news">
+			<div class="card">
+				<%= tweet %>
+			</div>
+		</div>
+	</div>
+  <% end %>
+</div>
+</main>
