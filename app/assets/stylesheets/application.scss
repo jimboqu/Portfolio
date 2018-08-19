@@ -147,5 +147,14 @@ body {
   }
 
 .content-news {
-  
+  color: black;
+  margin: 20px;
+}
+
+.content-news a {
+  color: green;
+}
+
+.content-news > .card {
+  padding: 30px;
 }
