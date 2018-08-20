@@ -15,7 +15,9 @@
 		  		<%= f.submit "post", class: "btn btn-primary" %>
 		  		<br>
 		  <% end %>
+
 		<% end %>
+		<%= render @blog.comments %>
 	  </div>
 	  <%= render "shared/blog_sidebar" %>
 	</div>
