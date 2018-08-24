@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code for my own personal website page. It is built in Ruby on Rails and, some, Javascript. 
 
-Things you may want to cover:
+It utilises Active Cable, Carrierwave, FriendlyID, and various other gems. 
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

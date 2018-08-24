@@ -6,7 +6,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5).order('created_at DESC')
+    if logged_in? (:site_admin)
+      @blogs = Blog.page(params[:page]).per(5).order('created_at DESC')
+    else
+      @blogs = Blog.published.page(params[:page]).per(5).order('created_at DESC')
+    end
     @page_title = "The Blog"
     @last_blog = Blog.order(:updated_at).last
   end
