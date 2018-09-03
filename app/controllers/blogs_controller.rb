@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:edit, :update, :destroy, :toggle_status]
+  before_action :set_blog, only: [:edit, :show, :update, :destroy, :toggle_status]
 
   layout "blog"
   access all: [:show, :index], user: {except: [:destroy, :edit, :create, :new, :toggle_status, :update]}, site_admin: :all
@@ -18,9 +18,13 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
-    @page_title = @blog.title
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+      @page_title = @blog.title
+    else
+      redirect_to blogs_path, notice: "You are not authorised to see that page"
+    end
   end
 
   # GET /blogs/new
