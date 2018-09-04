@@ -3,6 +3,14 @@
     <h4 class="font-italic">About</h4>
     <p class="mb-0">Thoughts and jottings from the content strategist, writer, and developer James Quilter.</p>
   </div>
+
+  <div class="p-3">
+    <h4 class="font-italic">Topics</h4>
+      <% @sidebar_topics.each do |topic| %>
+        <p><%= link_to topic.title, topic_path(topic)  %></p>
+      <% end %>
+  </div>
+
   <div class="p-3">
     <h4 class="font-italic">Social Platforms</h4>
     <ol class="list-unstyled social-icons">
