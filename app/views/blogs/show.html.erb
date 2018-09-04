@@ -5,7 +5,7 @@
   			<h2 class="blog-post-title"><%= @blog.title %></h2>
   			<p><%= link_to @blog.topic.title, topic_path(@blog.topic) %></p>
 			<p class="blog-post-meta"><%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> | <%= link_to "Topics", topics_path %></p>
-			<p><%= @blog.body %></p>
+			<p><%= markdown @blog.body %></p>
 		</div>
 		<%= render '/comments/comment_form' %>
 		<div id="comments" data-blog-id= "<%= @blog.id %>">
