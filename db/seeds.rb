@@ -11,6 +11,7 @@ Topic.create!(title: "Rails")
 Topic.create!(title: "Journalism")
 Topic.create!(title: "Ruby")
 Topic.create!(title: "Content Marketing")
+Topic.create!(title: "Opinion")
  
 
 puts "3 topics"
