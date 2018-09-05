@@ -9,10 +9,10 @@ module ApplicationHelper
     end
   end
 
-  def source_helper
-  	greeting = "Thanks for visiting me from #{session[:source]}"
+  def source_helper(styles)
+  	greeting = "Thanks for visiting me from #{session[:source]}, please feel free to #{ link_to "contact me", contact_path }"
     if session[:source] 
-      content_tag(:p, greeting, class: "source-greeting") 
+      content_tag(:p, greeting.html_safe, class: styles) 
     end 
   end
 #the method below takes two arguments and makes a nav. 
