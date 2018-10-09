@@ -9,6 +9,14 @@
     <%= favicon_link_tag 'favicons/favicon.ico' %>
     <%= stylesheet_link_tag    'folios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-49930072-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-49930072-2');
+    </script>
   </head>
 
   <body>

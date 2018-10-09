@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /password/
+Disallow: /signup/
+Disallow: /login/
+Disallow: /contact/$
+Disallow: /topics/
+Disallow: /content-news/$
