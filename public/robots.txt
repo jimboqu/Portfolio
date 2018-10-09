@@ -1,1 +1,8 @@
-# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
+User-agent: *
+Disallow: /assets/
+Disallow: /password/
+Disallow: /signup/
+Disallow: /login/
+Disallow: /contact/$
+Disallow: /topics/
+Disallow: /content-news/$
