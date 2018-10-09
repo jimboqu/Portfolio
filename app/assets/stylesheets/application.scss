@@ -1,6 +1,6 @@
 @import "bootstrap";
 @import "gritter";
-
+@import "font-awesome";
 /*
  * Globals
  */
@@ -157,4 +157,11 @@ body {
 
 .content-news > .card {
   padding: 30px;
+}
+
+.social-icons a {
+  font-size: 2.5em;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #0056b3
 }
