@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.published.page(params[:page]).per(5).order('created_at DESC')
     end
-    @page_title = "The Blog"
+    @page_title = "The Blackboard"
     @last_blog = Blog.order(:updated_at).last
   end
 
