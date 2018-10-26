@@ -93,6 +93,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   
-  config.action_cable.allowed_request_origins = ['https://jimboqup.herokuapp.com', 'http://jimboqup.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://www.jimboqu.com', 'http://www.jimboqu.com']
   config.action_cable.url = "wss://jimboqup.herokuapp.com/cable"
 end
